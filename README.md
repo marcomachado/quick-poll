@@ -26,11 +26,16 @@
 - OAuth2 Resource Server:
     - spring-boot-starter-oauth2-resource-server
 
+#### Springdoc API
+ - http://localhost:8080/api
+ - http://localhost:8080/swagger-ui/index.html
 
-http://localhost:8080/api
+#### Some features:
+ - api v1 -> simple CRUD
+ - api v2 -> v1 + adding sorting and pagination
+ - api v3 -> v2 + adding basic authentication + only admin user can delete polls
+ - Database Migrations with Flyway
 
-http://localhost:8080/swagger-ui/index.html
-
-Project based on books:
+#### Project-based on books:
  - **_Spring REST: Building Java Microservices and Cloud Applications_** — Second Edition — Balaji Varanasi and Maxim Bartkov (2022)
  - **_Full Stack Development with Spring Boot and React — Third Edition_** —  Juha Hinkula (2022)
