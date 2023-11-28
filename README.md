@@ -27,14 +27,6 @@
     - spring-boot-starter-oauth2-resource-server
 
 
-#### Next steps:
-
-- [ ] Add login with JWT
-- [ ] Add unit tests
-- [ ] Improve Error handling
-- [ ] HATEOAS
-
-
 http://localhost:8080/api
 
 http://localhost:8080/swagger-ui/index.html
