@@ -9,7 +9,7 @@ import java.util.Set;
 @Entity
 public class Poll {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "POLL_ID")
     private Long id;
 
@@ -67,5 +67,14 @@ public class Poll {
 
     public void setOptions(Set<Option> options) {
         this.options = options;
+    }
+
+    @Override
+    public String toString() {
+        return "Poll{" +
+                "id=" + id +
+                ", question='" + question + '\'' +
+                ", options=" + options +
+                '}';
     }
 }

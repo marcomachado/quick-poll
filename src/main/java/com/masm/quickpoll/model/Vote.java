@@ -7,7 +7,7 @@ import java.util.Objects;
 @Entity
 public class Vote {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "VOTE_ID")
     private Long id;
 
@@ -50,5 +50,13 @@ public class Vote {
     @Override
     public int hashCode() {
         return Objects.hash(id, option);
+    }
+
+    @Override
+    public String toString() {
+        return "Vote{" +
+                "id=" + id +
+                ", option=" + option +
+                '}';
     }
 }

@@ -1,14 +1,14 @@
-CREATE SEQUENCE option_seq AS BIGINT START WITH 1 INCREMENT BY 50;
+CREATE SEQUENCE option_seq START WITH 1 INCREMENT BY 50;
 
-CREATE SEQUENCE poll_seq AS BIGINT START WITH 1 INCREMENT BY 50;
+CREATE SEQUENCE poll_seq START WITH 1 INCREMENT BY 50;
 
-CREATE SEQUENCE users_seq AS BIGINT START WITH 1 INCREMENT BY 50;
+CREATE SEQUENCE users_seq START WITH 1 INCREMENT BY 50;
 
-CREATE SEQUENCE vote_seq AS BIGINT START WITH 1 INCREMENT BY 50;
+CREATE SEQUENCE vote_seq START WITH 1 INCREMENT BY 50;
 
 CREATE TABLE option
 (
-    option_id    BIGINT NOT NULL,
+    option_id    bigint auto_increment,
     option_value VARCHAR(255),
     poll_id      BIGINT,
     CONSTRAINT pk_option PRIMARY KEY (option_id)
@@ -16,14 +16,14 @@ CREATE TABLE option
 
 CREATE TABLE poll
 (
-    poll_id  BIGINT NOT NULL,
+    poll_id  BIGINT auto_increment,
     question VARCHAR(255),
     CONSTRAINT pk_poll PRIMARY KEY (poll_id)
 );
 
 CREATE TABLE users
 (
-    user_id    BIGINT NOT NULL,
+    user_id    BIGINT auto_increment,
     username   VARCHAR(255),
     password   VARCHAR(255),
     first_name VARCHAR(255),
@@ -34,7 +34,7 @@ CREATE TABLE users
 
 CREATE TABLE vote
 (
-    vote_id   BIGINT NOT NULL,
+    vote_id   BIGINT auto_increment,
     option_id BIGINT,
     CONSTRAINT pk_vote PRIMARY KEY (vote_id)
 );

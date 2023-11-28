@@ -1,16 +1,13 @@
 package com.masm.quickpoll.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 
 @Entity
 public class Option {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="OPTION_ID")
     private Long id;
     @Column(name = "OPTION_VALUE")
@@ -18,6 +15,10 @@ public class Option {
 
     public Option(Long id, String value) {
         this.id = id;
+        this.value = value;
+    }
+
+    public Option(String value) {
         this.value = value;
     }
 
@@ -51,5 +52,13 @@ public class Option {
     @Override
     public int hashCode() {
         return Objects.hash(id, value);
+    }
+
+    @Override
+    public String toString() {
+        return "Option{" +
+                "id=" + id +
+                ", value='" + value + '\'' +
+                '}';
     }
 }
