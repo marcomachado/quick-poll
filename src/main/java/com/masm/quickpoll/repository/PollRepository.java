@@ -6,4 +6,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface PollRepository extends PagingAndSortingRepository<Poll, Long>,
         ListCrudRepository<Poll, Long> {
+
+    //TODO: add methods to search polls based in strings
 }
